@@ -1,7 +1,19 @@
-function sum(a: number, b: number):number {
-    return a + b;
+type TPerson = {
+    id: number;
+    name: string;
+    age: number;
+    status?: boolean
 }
-const a: number = 10;
-const b: number = 20;
-const result = sum(a,b);
-console.log(result);
+
+const person: TPerson  = {
+    id: 1,
+    name: "vanh",
+    age:20
+}
+
+const persons: TPerson[] = [
+    { id:1 , name:"vanh", age:20, status: true},
+    { id:2 , name:"vvv", age:32, status:false},
+
+]
+console.log(person.name);
