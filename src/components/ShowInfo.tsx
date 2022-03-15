@@ -9,6 +9,7 @@ const ShowInfo = (props: ShowInfoProps) => {
   return (
     <div>
       { props.info.name}
+      
     </div>
   )
 }
