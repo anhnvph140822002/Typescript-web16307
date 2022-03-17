@@ -64,16 +64,15 @@ function App() {
         {/* <Route path="/" element={<h1>Home page</h1>} />
         <Route path="product" element={<h1>Product page</h1>} />
         <Route path="about" element={<h1> About page </h1>} /> */}
-        <Route path="/" element={<WebsiteLayout/>}>
-            <Route index element={<Home/>} />
-            <Route path="product" element={<Product/>} />
-        </Route>
-
-        <Route path="admin" element={<AdminLayout/>}>
-            <Route index element={<Navigate to="Dashboard"/>} />
-            <Route path="Dashboard" element={<Dashboard/>} />
-            <Route path="product" element={<ManagerProduct/>} />
-        </Route>
+        <Route path="/" element={<WebsiteLayout />}>
+          <Route index element={<Home />} />
+          <Route path="product" element={<Product />} />
+      </Route>
+      <Route path="admin" element={<AdminLayout />}> 
+        <Route index element={<Navigate to="Dashboard"/>} />
+        <Route path="Dashboard" element={<Dashboard />} />
+        <Route path="product" element={<ManagerProduct data={products}/>} />
+      </Route>
       </Routes>
       </main>
     </div>

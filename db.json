@@ -4,7 +4,31 @@
       "id": 1,
       "name": "sp1",
       "desc": "Sản Phẩm 1",
-      "price": "500"
+      "price": "111"
+    },
+    {
+      "id": 2,
+      "name": "sp2",
+      "desc": "Sản Phẩm 2",
+      "price": "222"
+    },
+    {
+      "id": 3,
+      "name": "sp3",
+      "desc": "Sản Phẩm 3",
+      "price": "333"
+    },
+    {
+      "id": 4,
+      "name": "sp4",
+      "desc": "Sản Phẩm 4",
+      "price": "444"
+    },
+    {
+      "id": 5,
+      "name": "sp5",
+      "desc": "Sản Phẩm 5",
+      "price": "555"
     }
   ]
 }
