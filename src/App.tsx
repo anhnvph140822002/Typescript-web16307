@@ -12,6 +12,7 @@ import Product from './pages/Product';
 import AdminLayout from './pages/layouts/AdminLayout';
 import Dashboard from './pages/Dashboard';
 import ManagerProduct from './pages/ManagerProduct';
+import "bootstrap/dist/css/bootstrap.min.css"
 function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
   // const [count, setCount] = useState<number>(0);
@@ -52,13 +53,13 @@ function App() {
           
         </tbody>
       </table> */}
-      <header>
+      {/* <header>
         <ul>
           <li><NavLink to="/">Home page</NavLink></li>
           <li><NavLink to="/product">Product</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
         </ul>
-      </header>
+      </header> */}
       <main>
       <Routes>
         {/* <Route path="/" element={<h1>Home page</h1>} />

@@ -13,6 +13,8 @@ const ManagerProduct = (props: ManagerProductProps) => {
                 <tr>
                     <th>#</th>
                     <th>Name</th>
+                    <th>mô tả</th>
+                    <th>giá</th>
                     <th></th>
                 </tr>
             </thead>
@@ -21,6 +23,8 @@ const ManagerProduct = (props: ManagerProductProps) => {
                 return <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{item.name}</td>
+                        <td>{item.desc}</td>
+                        <td>{item.price}</td>
                         <td>
                         {/* <button onClick={() => removeItem(item._id)}>Remove</button> */}
                         </td>
