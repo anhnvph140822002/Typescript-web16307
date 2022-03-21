@@ -8,10 +8,10 @@ type ManagerProductProps = {
 const ManagerProduct = (props: ManagerProductProps) => {
   return (
     <div>
-        <table>
+      <table className="table">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>STT</th>
                     <th>Name</th>
                     <th>mô tả</th>
                     <th>giá</th>
@@ -19,18 +19,17 @@ const ManagerProduct = (props: ManagerProductProps) => {
                 </tr>
             </thead>
             <tbody>
-            {props.data && props.data.map((item, index) => {
-                return <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.name}</td>
-                        <td>{item.desc}</td>
-                        <td>{item.price}</td>
-                        <td>
-                        {/* <button onClick={() => removeItem(item._id)}>Remove</button> */}
-                        </td>
+              {props.data && props.data.map((item, index) => {
+                  return <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{item.name}</td>
+                    <td>{item.desc}</td>
+                    <td>{item.price}</td>
+                    <td>
+                    {/* <button onClick={() => removeItem(item._id)}>Remove</button> */}
+                    </td>
                     </tr>
-            })}
-            
+              })}
             </tbody>
       </table>
     </div>

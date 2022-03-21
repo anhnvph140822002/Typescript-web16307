@@ -7,10 +7,10 @@ const AdminLayout = (props: Props) => {
   return (
     <div>
         <header>
-            Header admin
+            Header admin hí anh em
         </header>
         <aside>
-            Menu Admin
+            Menu Admin A nhong
         </aside>
         <main>
             <Outlet />

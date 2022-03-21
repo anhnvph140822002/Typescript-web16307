@@ -29,6 +29,22 @@
       "name": "sp5",
       "desc": "Sản Phẩm 5",
       "price": "555"
+    },
+    {
+      "name": " lamborghini",
+      "price": "99",
+      "id": 6
+    },
+    {
+      "name": "Phát triển của lamborghi",
+      "price": "",
+      "id": 7
+    },
+    {
+      "name": "Ngô Việt Anh",
+      "price": "99",
+      "desc": "ddddddđ",
+      "id": 8
     }
   ]
 }

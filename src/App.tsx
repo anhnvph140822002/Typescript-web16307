@@ -4,7 +4,7 @@ import logo from './logo.svg'
 import './App.css'
 import ShowInfo from './components/ShowInfo'
 import type { ProductType } from './types/product';
-import { list, remove } from './api/product';
+import { add, list, remove } from './api/product';
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import WebsiteLayout from './pages/layouts/WebsiteLayout';
 import Home from './pages/Home';
@@ -13,6 +13,7 @@ import AdminLayout from './pages/layouts/AdminLayout';
 import Dashboard from './pages/Dashboard';
 import ManagerProduct from './pages/ManagerProduct';
 import "bootstrap/dist/css/bootstrap.min.css"
+import ProductAdd from './pages/ProductAdd';
 function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
   // const [count, setCount] = useState<number>(0);
@@ -32,27 +33,13 @@ function App() {
     // reRender
     data && setProducts(products.filter(item => item.id !== data.id));
   }
+  const onHandlerAdd = async (product: ProductType) => {
+    // call api
+    const { data} = await add(product);
+    setProducts([...products, data])
+  }
   return (
     <div className="App">
-      {/* <table>
-        <thead>
-          <th>#</th>
-          <th>Name</th>
-          <th></th>
-        </thead>
-        <tbody>
-          {products && products.map((item, index) => {
-            return <tr>
-                    <td>{index + 1}</td>
-                    <td>{item.name}</td>
-                    <td>
-                      <button onClick={() => removeItem(item.id)}>Remove</button>
-                    </td>
-                  </tr>
-          })}
-          
-        </tbody>
-      </table> */}
       {/* <header>
         <ul>
           <li><NavLink to="/">Home page</NavLink></li>
@@ -73,6 +60,7 @@ function App() {
         <Route index element={<Navigate to="Dashboard"/>} />
         <Route path="Dashboard" element={<Dashboard />} />
         <Route path="product" element={<ManagerProduct data={products}/>} />
+        <Route path='/admin/product/add' element={<ProductAdd onAdd={onHandlerAdd}/>} />
       </Route>
       </Routes>
       </main>
