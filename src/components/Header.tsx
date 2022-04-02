@@ -5,28 +5,134 @@ import Search from "./Search";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">
-          Logo
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <Menu />
-          <Search />
+    <>
+      <header className="header-area header-sticky">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <nav className="main-nav">
+                <a href="index.html" className="logo">
+                  <img src="src/assets/images/logo.png" />
+                </a>
+                <ul className="nav">
+             <Menu/>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </header>
+      <div className="main-banner" id="top">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="left-content">
+                                <div className="thumb">
+                                    <div className="inner-content">
+                                        <h4>We Are Hexashop</h4>
+                                        <span>Awesome, clean &amp; creative HTML5 Template</span>
+                                        <div className="main-border-button">
+                                            <a href="#">Purchase Now!</a>
+                                        </div>
+                                    </div>
+                                    <img src="src/assets/images/left-banner-image.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="right-content">
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <div className="right-first-image">
+                                            <div className="thumb">
+                                                <div className="inner-content">
+                                                    <h4>Women</h4>
+                                                    <span>Best Clothes For Women</span>
+                                                </div>
+                                                <div className="hover-content">
+                                                    <div className="inner">
+                                                        <h4>Women</h4>
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
+                                                        </p>
+                                                        <div className="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="src/assets/images/baner-right-image-01.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="right-first-image">
+                                            <div className="thumb">
+                                                <div className="inner-content">
+                                                    <h4>Men</h4>
+                                                    <span>Best Clothes For Men</span>
+                                                </div>
+                                                <div className="hover-content">
+                                                    <div className="inner">
+                                                        <h4>Men</h4>
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
+                                                        </p>
+                                                        <div className="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="src/assets/images/baner-right-image-02.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="right-first-image">
+                                            <div className="thumb">
+                                                <div className="inner-content">
+                                                    <h4>Kids</h4>
+                                                    <span>Best Clothes For Kids</span>
+                                                </div>
+                                                <div className="hover-content">
+                                                    <div className="inner">
+                                                        <h4>Kids</h4>
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
+                                                        </p>
+                                                        <div className="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="src/assets/images/baner-right-image-03.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="right-first-image">
+                                            <div className="thumb">
+                                                <div className="inner-content">
+                                                    <h4>Accessories</h4>
+                                                    <span>Best Trend Accessories</span>
+                                                </div>
+                                                <div className="hover-content">
+                                                    <div className="inner">
+                                                        <h4>Accessories</h4>
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
+                                                        </p>
+                                                        <div className="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="src/assets/images/baner-right-image-04.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </>
   );
 };
 

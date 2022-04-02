@@ -12,9 +12,6 @@ const WebsiteLayout = (props: Props) => {
         <main>
            <Outlet />
         </main>
-        <footer>
-            Footer
-        </footer>
     </div>
   )
 }
