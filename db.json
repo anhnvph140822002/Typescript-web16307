@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "sp1",
-      "desc": "Sản Phẩm 1",
-      "price": "111"
-    },
-    {
       "id": 2,
       "name": "sp2",
       "desc": "Sản Phẩm 2",
@@ -14,37 +8,15 @@
     },
     {
       "id": 3,
-      "name": "sp3",
-      "desc": "Sản Phẩm 3",
-      "price": "333"
+      "name": "sp3ggg",
+      "desc": "Sản Phẩm 3gggg",
+      "price": "3336666"
     },
     {
-      "id": 4,
-      "name": "sp4",
-      "desc": "Sản Phẩm 4",
-      "price": "444"
-    },
-    {
-      "id": 5,
-      "name": "sp5",
-      "desc": "Sản Phẩm 5",
-      "price": "555"
-    },
-    {
-      "name": " lamborghini",
-      "price": "99",
-      "id": 6
-    },
-    {
-      "name": "Phát triển của lamborghi",
-      "price": "",
-      "id": 7
-    },
-    {
-      "name": "Ngô Việt Anh",
-      "price": "99",
-      "desc": "ddddddđ",
-      "id": 8
+      "name": "văn dức",
+      "price": "666",
+      "desc": "77777",
+      "id": 4
     }
   ]
 }

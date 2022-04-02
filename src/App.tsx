@@ -4,7 +4,7 @@ import logo from './logo.svg'
 import './App.css'
 import ShowInfo from './components/ShowInfo'
 import type { ProductType } from './types/product';
-import { add, list, remove } from './api/product';
+import { add, list, remove,update } from './api/product';
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import WebsiteLayout from './pages/layouts/WebsiteLayout';
 import Home from './pages/Home';
@@ -12,8 +12,22 @@ import Product from './pages/Product';
 import AdminLayout from './pages/layouts/AdminLayout';
 import Dashboard from './pages/Dashboard';
 import ManagerProduct from './pages/ManagerProduct';
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import ProductAdd from './pages/ProductAdd';
+import ProductEdit from './pages/ProductEdit';
+import mongoose from 'mongoose';
+import Signup from './pages/Signup';
+import Signin from './pages/Signin';
+// import {ConfigProvider} from 'antd';
+import Test from './components/Test';
+import PrivateRouter from './components/privateRouter';
+
+// ConfigProvider.config({
+//   theme: {
+//     primaryColor: '#25b864',
+//   },
+// });
 function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
   // const [count, setCount] = useState<number>(0);
@@ -23,49 +37,50 @@ function App() {
         const { data } = await list();
         setProducts(data);
      }
-     console.log(products);
      getProducts();
   },[])
 
-  const removeItem = async (id: number) => {
+  const onHandleRemove = async (id: number) => {
     // xoa tren API
-    const { data } = await remove(id);
+    await remove(id);
     // reRender
-    data && setProducts(products.filter(item => item.id !== data.id));
+    setProducts(products.filter(item => item.id !== id));
   }
+
   const onHandlerAdd = async (product: ProductType) => {
     // call api
     const { data} = await add(product);
     setProducts([...products, data])
   }
+  const onHandleUpdate = async (product:ProductType) => {
+    console.log(product);
+   const { data } = await update(product)
+   setProducts(products.map(item => item.id == data.id ? data : item));
+}
   return (
     <div className="App">
-      {/* <header>
-        <ul>
-          <li><NavLink to="/">Home page</NavLink></li>
-          <li><NavLink to="/product">Product</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-        </ul>
-      </header> */}
       <main>
       <Routes>
-        {/* <Route path="/" element={<h1>Home page</h1>} />
-        <Route path="product" element={<h1>Product page</h1>} />
-        <Route path="about" element={<h1> About page </h1>} /> */}
         <Route path="/" element={<WebsiteLayout />}>
           <Route index element={<Home />} />
           <Route path="product" element={<Product />} />
+          <Route path="signup" element={<Signup />}/>
+          <Route path="signin" element={<Signin />}/>
       </Route>
       <Route path="admin" element={<AdminLayout />}> 
         <Route index element={<Navigate to="Dashboard"/>} />
         <Route path="Dashboard" element={<Dashboard />} />
-        <Route path="product" element={<ManagerProduct data={products}/>} />
-        <Route path='/admin/product/add' element={<ProductAdd onAdd={onHandlerAdd}/>} />
+        <Route path="product">
+          <Route index element={<ManagerProduct data={products} onRemove={onHandleRemove}/>} />
+          <Route path="add" element={<ProductAdd onAdd={onHandlerAdd}/>} />
+          <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate}/>} />
+        </Route>
       </Route>
       </Routes>
       </main>
     </div>
   )
 }
+// mongoose.connect('mongodb://localhost:27017/typescript');
 
 export default App
