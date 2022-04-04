@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { ProductType } from '../types/productdetal'
+import { ProductType } from '../types/product'
 import { read } from '../api/product';
 import '../assets/css/bootstrap.min.css'
 import '../assets/css/flex-slider.css'
@@ -12,17 +12,17 @@ import '../assets/css/templatemo-hexashop.css'
 import '../assets/css/csscaptun.css'
 import anh from "src/assets/images/single-product-01.jpg";
 import anhh from "src/assets/images/single-product-02.jpg";
-type ProductdetalProps = {
+type ProductProps = {
   products: ProductType[]
 }
 
 type Show = {
   name: string,
   price: number,
-  desc: string
+  desc: string,
 }
 
-const productDetail = (props: ProductdetalProps) => {
+const productDetail = (props: ProductProps) => {
   const {id} = useParams();
   const { register, formState: { errors }, reset } = useForm<Show>();
   useEffect(() => {
