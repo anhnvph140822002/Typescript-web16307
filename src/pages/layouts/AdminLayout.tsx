@@ -1,13 +1,15 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
+
 type Props = {}
 
 const AdminLayout = (props: Props) => {
   return (
+    <>
     <div>
         <header>
-            Header admin hí anh em
+        <img src="src/assets/images/banner.jpg" alt="" />
         </header>
         <aside>
             Menu Admin A nhong
@@ -16,6 +18,7 @@ const AdminLayout = (props: Props) => {
             <Outlet />
         </main>
     </div>
+    </>
   )
 }
 

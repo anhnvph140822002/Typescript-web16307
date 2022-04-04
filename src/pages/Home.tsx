@@ -1,12 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { ProductType } from '../types/product'
+type HomeProps = {
+    products: ProductType[]
+}
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = (props: HomeProps) => {
     return (
         <>
-            <section className="section" id="men">
-                <div className="container">
+            <section className="section" id="products">
+                {/* <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="section-heading">
@@ -15,337 +18,36 @@ const Home = (props: Props) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12">
-                            <div className="men-item-carousel">
-                                <div className="owl-men-item owl-carousel">
+                        {props.products?.map((product) => {
+                            return <>
+                                <div className="col-lg-4">
                                     <div className="item">
                                         <div className="thumb">
                                             <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/men-01.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>classNameic Spring</h4>
-                                            <span>$120.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/men-02.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>Air Force 1 X</h4>
-                                            <span>$90.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/men-03.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>Love Nana ‘20</h4>
-                                            <span>$150.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/men-01.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>classNameic Spring</h4>
-                                            <span>$120.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section className="section" id="women">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="section-heading">
-                                <h2>Women's Latest</h2>
-                                <span>Details to details is what makes Hexashop different from the other themes.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="women-item-carousel">
-                                <div className="owl-women-item owl-carousel">
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
                                                 <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
+                                                    <li>
+                                                        <a href="single-product.html">
+                                                       
+                                                        </a>
                                                     </li>
+                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
+                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <img src="src/assets/images/women-01.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>New Green Jacket</h4>
-                                            <span>$75.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/women-02.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>classNameic Dress</h4>
-                                            <span>$45.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/women-03.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>Spring Collection</h4>
-                                            <span>$130.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/women-01.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>classNameic Spring</h4>
-                                            <span>$120.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="section" id="kids">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="section-heading">
-                                <h2>Kid's Latest</h2>
-                                <span>Details to details is what makes Hexashop different from the other themes.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="kid-item-carousel">
-                                <div className="owl-kid-item owl-carousel">
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                           
                                             <img src="src/assets/images/kid-01.jpg" alt="" />
                                         </div>
                                         <div className="down-content">
-                                            <h4>School Collection</h4>
-                                            <span>$80.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/kid-02.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>Summer Cap</h4>
-                                            <span>$12.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/kid-03.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>classNameic Kid</h4>
-                                            <span>$30.00</span>
-                                            <ul className="stars">
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                                <li><i className="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="thumb">
-                                            <div className="hover-content">
-                                                <ul>
-                                                    <li><a href="single-product.html"><i className="fa fa-eye"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
-                                                    <li><a href="single-product.html"><i className="fa fa-shopping-cart"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <img src="src/assets/images/kid-01.jpg" alt="" />
-                                        </div>
-                                        <div className="down-content">
-                                            <h4>classNameic Spring</h4>
-                                            <span>$120.00</span>
+                                            <h4>{product.name}</h4>
+                                            
+                                            <span>{product.price}</span>
+                                            <span>
+                                            <Link to={`/detail/${product.id}/products`}>Edit</Link>
+                                            </span>
                                             <ul className="stars">
                                                 <li><i className="fa fa-star"></i></li>
                                                 <li><i className="fa fa-star"></i></li>
@@ -356,6 +58,27 @@ const Home = (props: Props) => {
                                         </div>
                                     </div>
                                 </div>
+                            </>
+                        })}
+                        <div className="col-lg-12">
+                            <div className="pagination">
+                                <ul>
+                                    <li>
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li className="active">
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Next</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -553,50 +276,7 @@ const Home = (props: Props) => {
                     </div>
                 </div>
             </div>
-            <footer>
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-3">
-                    <div className="first-item">
-                        <div className="logo">
-                            <img src="src/assets/images/white-logo.png" alt="hexashop ecommerce templatemo"/>
-                        </div>
-                        <ul>
-                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
-                            <li><a href="#">010-020-0340</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <h4>Shopping &amp; Categories</h4>
-                    <ul>
-                        <li><a href="#">Men’s Shopping</a></li>
-                        <li><a href="#">Women’s Shopping</a></li>
-                        <li><a href="#">Kid's Shopping</a></li>
-                    </ul>
-                </div>
-                <div className="col-lg-3">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div className="col-lg-3">
-                    <h4>Help &amp; Information</h4>
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Tracking ID</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+
         </>
     )
 }

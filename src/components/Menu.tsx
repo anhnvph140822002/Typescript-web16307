@@ -30,23 +30,20 @@ const Menu = (props: Props) => {
       <li className="scroll-to-section">
       <NavLink className="nav-link" to="/product">Product</NavLink>
       </li>
+      {/* <li className="scroll-to-section">
+      <NavLink className="nav-link" to="/">About Us</NavLink>
+      </li> */}
       <li className="scroll-to-section">
-      <NavLink className="nav-link" to="/product">About Us</NavLink>
+      <NavLink className="nav-link" to="/">Contact Us</NavLink>
       </li>
       <li className="scroll-to-section">
-      <NavLink className="nav-link" to="/product">Contact Us</NavLink>
-      </li>
-      <li className="scroll-to-section">
-      <NavLink className="nav-link" to="/product">Giỏ hàng</NavLink>
+      <NavLink className="nav-link" to="/">Giỏ hàng</NavLink>
       </li>
       <li className="scroll-to-section">
       <NavLink className="nav-link" to="/admin">Dashboard</NavLink>
       </li>
       <li className="scroll-to-section">
       <NavLink className="nav-link" to="/admin/product">Manager Product</NavLink>
-      </li>
-      <li className="scroll-to-section">
-        <a href="#explore">Explore</a>
       </li>
     </>
 
