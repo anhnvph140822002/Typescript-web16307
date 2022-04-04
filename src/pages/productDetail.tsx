@@ -10,8 +10,8 @@ import '../assets/css/lightbox.css'
 import '../assets/css/owl-carousel.css'
 import '../assets/css/templatemo-hexashop.css'
 import '../assets/css/csscaptun.css'
-import anh from "src/assets/images/single-product-01.jpg";
-import anhh from "src/assets/images/single-product-02.jpg";
+import anh from "../assets/images/single-product-01.jpg"
+import anhh from "../assets/images/single-product-02.jpg"
 type ProductProps = {
   products: ProductType[]
 }
@@ -34,22 +34,22 @@ const productDetail = (props: ProductProps) => {
   }, []);
   return (
     <>
+    
       
       <section className="section" id="product">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
               <div className="left-images">
-                <img src="src/assets/images/single-product-01.jpg" />
-                <img src="src/assets/images/single-product-02.jpg" />
+              <img src={anh} />
+              <img src={anhh} />
               </div>
             </div>
             <div className="col-lg-4">
               <div className="right-content">
                 <h4><input type="text" placeholder="Enter Name." className="input" {...register('name')} />
                 </h4>
-                <span className="price"><input type="text" placeholder="Enter Name." className="input" {...register('price')} />
-                </span>
+                
                 <ul className="stars">
                   
                   <li><i className="fa fa-star" /></li>
@@ -77,7 +77,8 @@ const productDetail = (props: ProductProps) => {
                   </div>
                 </div>
                 <div className="total">
-                  <h4>Total: $210.00</h4>
+                  <h4>Total:<span  className="price"><input type="text" placeholder="Enter Name." className="input" {...register('price')} />
+                </span></h4>
                   <div className="main-border-button"><a href="#">Add To Cart</a></div>
                 </div>
               </div>

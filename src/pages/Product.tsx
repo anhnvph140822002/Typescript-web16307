@@ -28,12 +28,14 @@ const Product = (props: ProductProps) => {
                                         <div className="thumb">
                                             <div className="hover-content">
                                                 <ul>
-                                                    <li><a href=""><i className="fa fa-eye"></i></a></li>
+                                                    <li><a href="single-product.html">
+                                                        <Link to={`/detail/${product.id}/products`}><i className="fa fa-eye"></i></Link>
+                                                    </a></li>
                                                     <li><a href=""><i className="fa fa-star"></i></a></li>
                                                     <li><a href=""><i className="fa fa-shopping-cart"></i></a></li>
                                                 </ul>
                                             </div>
-                                            
+
                                             <img src="src/assets/images/kid-03.jpg" alt="" />
                                         </div>
                                         <div className="down-content">
@@ -76,7 +78,7 @@ const Product = (props: ProductProps) => {
                 </div>
             </section>
             {/* <Home /> */}
-            </>
+        </>
 
     )
 }
