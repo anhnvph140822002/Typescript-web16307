@@ -11,7 +11,6 @@ type ManagerProductProps = {
 const ManagerProduct = (props: ManagerProductProps) => {
   return (
     <div>
-      <a href="/admin/product/add">thêm</a>
       <table className="table">
             <thead>
                 <tr>
