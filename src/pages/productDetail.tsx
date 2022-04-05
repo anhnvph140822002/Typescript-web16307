@@ -23,7 +23,7 @@ type Show = {
 }
 
 const productDetail = (props: ProductProps) => {
-  const {id} = useParams();
+  const { id } = useParams();
   const { register, formState: { errors }, reset } = useForm<Show>();
   useEffect(() => {
     const getProduct = async () => {
@@ -34,24 +34,24 @@ const productDetail = (props: ProductProps) => {
   }, []);
   return (
     <>
-    
-      
+
+
       <section className="section" id="product">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
               <div className="left-images">
-              <img src={anh} />
-              <img src={anhh} />
+                <img src={anh} />
+                <img src={anhh} />
               </div>
             </div>
             <div className="col-lg-4">
               <div className="right-content">
                 <h4><input type="text" placeholder="Enter Name." className="input" {...register('name')} />
                 </h4>
-                
+
                 <ul className="stars">
-                  
+
                   <li><i className="fa fa-star" /></li>
                   <li><i className="fa fa-star" /></li>
                   <li><i className="fa fa-star" /></li>
@@ -77,8 +77,8 @@ const productDetail = (props: ProductProps) => {
                   </div>
                 </div>
                 <div className="total">
-                  <h4>Total:<span  className="price"><input type="text" placeholder="Enter Name." className="input" {...register('price')} />
-                </span></h4>
+                  <h4>Total:<span className="price"><input type="text" placeholder="Enter Name." className="input" {...register('price')} />
+                  </span></h4>
                   <div className="main-border-button"><a href="#">Add To Cart</a></div>
                 </div>
               </div>

@@ -9,17 +9,6 @@ import "./flag-icon.min.css"
 import "./c3.css"
 import "./chartist.css"
 import "./morris.css"
-// import "./jquery-3.3.1.min.js"
-// import "./bootstrap.bundle.js"
-// import "./jquery.slimscroll.js"
-// import "./chartist.min.js"
-// import "./jquery.sparkline.js"
-// import "./raphael.min.js"
-// import "./morris.js"
-// import "../c3.min.js"
-// import "../d3-5.4.0.min.js"
-// import "../C3chartjs.js"
-// import "../dashboard-ecommerce.js"
 type Props = {}
 
 const AdminLayout = (props: Props) => {
