@@ -2,9 +2,9 @@
   "products": [
     {
       "id": 2,
-      "name": "sp2",
-      "desc": "Sản Phẩm v.a  fuck boy",
-      "price": "222"
+      "name": "sp2update",
+      "desc": "Sản Phẩm v.a ",
+      "price": "22255555"
     },
     {
       "id": 3,
@@ -42,7 +42,7 @@
       "email": "admin@gmail.com",
       "password": "123456789",
       "id": 1,
-      "role":1
+      "role": 1
     }
   ]
 }

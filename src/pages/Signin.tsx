@@ -17,12 +17,19 @@ const Signin = () => {
     }
   return (
     <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="email" {...register('email', { required: true})}/>
-            <input type="password" {...register('password')}/>
-            <button>Dang nhap</button>
-        </form>
-    </div>
+           <form onSubmit={handleSubmit(onSubmit)}>
+
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">Email</label>
+                    <input type="email" {...register('email', { required: true})} className="form-control" id="exampleInputPassword1"/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">Pass</label>
+                    <input type="password" {...register('password')} className="form-control" id="exampleInputPassword1"/>
+                </div>
+                <button type="submit" href="/" className="btn btn-primary">Submit</button>
+            </form>
+      </div>
   )
 }
 
