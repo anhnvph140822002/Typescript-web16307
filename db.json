@@ -44,5 +44,12 @@
       "id": 1,
       "role": 1
     }
+  ],
+  "category": [
+    {
+      "name": "admin@gmail.com",
+      "id": 1
+    }
   ]
+
 }
