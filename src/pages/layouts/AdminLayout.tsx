@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import "./style.css"
 import "./bootstrap.min.css"
 import "./style1.css"
@@ -32,36 +32,35 @@ const AdminLayout = (props: Props) => {
         <div className="nav-left-sidebar sidebar-dark">
           <div className="menu-list">
             <nav className="navbar navbar-expand-lg navbar-light">
-              <a className="d-xl-none d-lg-none" href="/admin/product">Dashboard</a>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav flex-column">
                   <li className="nav-divider">
                     Menu
                   </li>
                   <li className="nav-item ">
-                    <a className="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i className="fa fa-fw fa-user-circle" />Dashboard <span className="badge badge-success">6</span></a>
+                    <Link className="nav-link active" to="product" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i className="fa fa-fw fa-user-circle" />Dashboard <span className="badge badge-success">6</span></Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/admin/product/add" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i className="fa fa-fw fa-rocket" />Thêm</a>
+                    <Link className="nav-link" to="/admin/product/add" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i className="fa fa-fw fa-rocket" />Thêm</Link>
                   </li>
                   <li className="nav-divider">
                     Features
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i className="fas fa-fw fa-file" />
-                      Pages </a>
+                    <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i className="fas fa-fw fa-file" />
+                      Pages </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i className="fas fa-fw fa-inbox" />Logout</a>
+                    <Link className="nav-link" to="/" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i className="fas fa-fw fa-inbox" />Logout</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i className="fas fa-fw fa-columns" />Icons</a>
+                    <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i className="fas fa-fw fa-columns" />Icons</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i className="fas fa-fw fa-map-marker-alt" />Maps</a>
+                    <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i className="fas fa-fw fa-map-marker-alt" />Maps</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i className="fas fa-f fa-folder" />Menu Level</a>
+                    <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i className="fas fa-f fa-folder" />Menu Level</Link>
                   </li>
                 </ul>
               </div>

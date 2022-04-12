@@ -1,4 +1,5 @@
-export type ProductType = {
-    id: number,
+export type CategoryType = {
+    _id: number,
     name: string, 
+   
 }

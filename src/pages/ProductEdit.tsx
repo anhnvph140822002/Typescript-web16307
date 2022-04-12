@@ -21,7 +21,7 @@ const ProductEdit = (props: ProductEditProps) => {
 
     useEffect(() => {
         const getProduct = async () => {
-            const { data } = await read(id);
+            const { data } = await read(_id);
             reset(data);
         }
         getProduct();
@@ -44,11 +44,7 @@ const ProductEdit = (props: ProductEditProps) => {
                  <label htmlFor="exampleInputPassword1" className="form-label">Giá</label>
                  <input type="number" placeholder='Giá sản phẩm' {...register('price')}/>
              </div>
-             <div className="mb-3">
-                 <label htmlFor="exampleInputPassword1" className="form-label">mô tả</label>
-                 <input type="text" placeholder='Tên sản phẩm' {...register('desc')}/>
-             </div>
-             <button type="submit" href="http://localhost:3000/admin/product" className="btn btn-primary"/>Update
+             <button type="submit" ref="http://localhost:3001/admin/product" className="btn btn-primary"/>Update
          </form>
      </div>
     )
