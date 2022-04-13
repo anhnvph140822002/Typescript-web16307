@@ -29,7 +29,7 @@ const Product = (props: ProductProps) => {
                                             <div className="hover-content">
                                                 <ul>
                                                     <li><a href="single-product.html">
-                                                        <Link to={`/detail/${product.id}/products`}><i className="fa fa-eye"></i></Link>
+                                                        <Link to={`/detail/${product._id}/products`}><i className="fa fa-eye"></i></Link>
                                                     </a></li>
                                                     <li><a href=""><i className="fa fa-star"></i></a></li>
                                                     <li><a href=""><i className="fa fa-shopping-cart"></i></a></li>

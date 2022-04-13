@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import { read } from '../api/product';
@@ -7,46 +7,41 @@ import { ProductType } from '../types/product';
 type ProductEditProps = {
     onUpdate: (product: ProductType) => void
 }
-
 type FormInputs = {
+
     name: string,
-    price: number,
-    desc: string
+    price: number
 }
 
 const ProductEdit = (props: ProductEditProps) => {
     const { id } = useParams();
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormInputs>();
+    const {register, handleSubmit, formState: {errors}, reset} = useForm<FormInputs>();
     const navigate = useNavigate();
+// console.log(id);
 
     useEffect(() => {
-        const getProduct = async () => {
-            const { data } = await read(_id);
+        const getProduct = async (id:any) => {
+            const { data } = await read(id);
+            console.log(data);
+            
             reset(data);
         }
-        getProduct();
+        getProduct(id);
     }, []);
 
     const onSubmit: SubmitHandler<FormInputs> = data => {
-        console.log(data);
+        
         props.onUpdate(data);
         navigate('/admin/product');
-
-    }
-    return (
-         <div>
-         <form onSubmit={handleSubmit(onSubmit)}>
-             <div className="mb-3">
-                 <label htmlFor="exampleInputEmail1" className="form-label">Tên</label>
-                 <input type="text" placeholder='Tên sản phẩm' {...register('name')}/>
-             </div>
-             <div className="mb-3">
-                 <label htmlFor="exampleInputPassword1" className="form-label">Giá</label>
-                 <input type="number" placeholder='Giá sản phẩm' {...register('price')}/>
-             </div>
-             <button type="submit" ref="http://localhost:3001/admin/product" className="btn btn-primary"/>Update
-         </form>
-     </div>
-    )
+    } 
+    
+  return (
+    <form action="" onSubmit={handleSubmit(onSubmit)}>
+        <input type="text" placeholder='Tên sản phẩm' {...register('name')}/>
+        <input type="number" placeholder='Giá sản phẩm' {...register('price')}/>
+        <button>Update</button>
+    </form>
+  )
 }
+
 export default ProductEdit

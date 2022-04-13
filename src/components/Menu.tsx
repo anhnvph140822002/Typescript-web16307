@@ -34,10 +34,10 @@ const Menu = (props: Props) => {
       <NavLink className="nav-link" to="/">About Us</NavLink>
       </li> */}
       <li className="scroll-to-section">
-      <NavLink className="nav-link" to="/">Contact Us</NavLink>
+      <NavLink className="nav-link" to="signup">Signup</NavLink>
       </li>
       <li className="scroll-to-section">
-      <NavLink className="nav-link" to="/">Giỏ hàng</NavLink>
+      <NavLink className="nav-link" to="signin">Signin</NavLink>
       </li>
       <li className="scroll-to-section">
       <NavLink className="nav-link" to="/admin">Dashboard</NavLink>

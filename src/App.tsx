@@ -35,7 +35,7 @@ import "react-toastify/dist/ReactToastify.min.css"
 function App() {
   const [products, setProducts,] = useState<ProductType[]>([]);
   // const [count, setCount] = useState<number>(0);
-  const [Categorys,setCategorys] = useState <CategoryType[]>([]);
+  const [Categorys,setCategorys] = useState<CategoryType[]>([]);
   
 
   useEffect(() => {
@@ -70,7 +70,8 @@ function App() {
   const onHandleUpdate = async (product: ProductType) => {
     console.log(product);
     const { data } = await update(product)
-    setProducts(products.map(item => item._id == data.id ? data : item));
+    setProducts(products.map(item => item._id === data._id ? data : item));
+
   }
 
   //// category
@@ -115,7 +116,7 @@ function App() {
             <Route path="Dashboard" element={<Dashboard />} />
             <Route path="product">
               <Route index element={<ManagerProduct data={products} onRemove={onHandleRemove} />} />
-              <Route path="add" element={<ProductAdd onAdd={onHandlerAdd} />} />
+              <Route path="add" element={<ProductAdd onAdd={onHandlerAdd} listCategory={Categorys} />} />
               <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate} />} />
             </Route>
             <Route path='category'>

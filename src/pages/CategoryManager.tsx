@@ -24,8 +24,8 @@ const CategoryManager = (props: CategoryManagerProps) => {
               return <tr key ={index}>
                 <td>{index+1}</td>
                 <td>{item.name}</td>
-                <Link to={`/admin/category/${item.id}/edit`}>Edit</Link>
-                <button onClick={() => props.onRemove(item.id)}>Remove</button>
+                <Link to={`/admin/category/${item._id}/edit`}>Edit</Link>
+                <button onClick={() => props.onRemove(item._id)}>Remove</button>
               </tr>
             })}
           </tbody>

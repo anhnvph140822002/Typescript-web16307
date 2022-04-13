@@ -38,7 +38,7 @@ const AdminLayout = (props: Props) => {
                     Menu
                   </li>
                   <li className="nav-item ">
-                    <Link className="nav-link active" to="product" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i className="fa fa-fw fa-user-circle" />Dashboard <span className="badge badge-success">6</span></Link>
+                    <Link className="nav-link active" to="dashboard" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i className="fa fa-fw fa-user-circle" />Dashboard <span className="badge badge-success">6</span></Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/admin/product/add" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i className="fa fa-fw fa-rocket" />Thêm</Link>
@@ -47,14 +47,14 @@ const AdminLayout = (props: Props) => {
                     Features
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i className="fas fa-fw fa-file" />
-                      Pages </Link>
+                    <Link className="nav-link" to="product" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i className="fas fa-fw fa-file" />
+                      List product </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i className="fas fa-fw fa-inbox" />Logout</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i className="fas fa-fw fa-columns" />Icons</Link>
+                    <Link className="nav-link" to="category" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i className="fas fa-fw fa-columns" />List Category</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i className="fas fa-fw fa-map-marker-alt" />Maps</Link>
