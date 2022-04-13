@@ -42,9 +42,7 @@ const Menu = (props: Props) => {
       <li className="scroll-to-section">
       <NavLink className="nav-link" to="/admin">Dashboard</NavLink>
       </li>
-      <li className="scroll-to-section">
-      <NavLink className="nav-link" to="/admin/product">Manager Product</NavLink>
-      </li>
+
     </>
 
 

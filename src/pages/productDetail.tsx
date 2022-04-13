@@ -58,8 +58,6 @@ const productDetail = (props: ProductProps) => {
                   <li><i className="fa fa-star" /></li>
                   <li><i className="fa fa-star" /></li>
                 </ul>
-                <span className="desc"><input type="text" placeholder="Enter Name." className="input" {...register('desc')} />
-                </span>
                 <div className="quote">
                   <i className="fa fa-quote-left" />
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>

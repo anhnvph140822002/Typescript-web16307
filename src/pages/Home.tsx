@@ -31,7 +31,7 @@ const Home = (props: HomeProps) => {
                                                 <ul>
                                                     <li>
                                                         <a href="single-product.html">
-                                                            <Link to={`/detail/${product.id}/products`}><i className="fa fa-eye"></i></Link>
+                                                            <Link to={`/detail/${product._id}/products`}><i className="fa fa-eye"></i></Link>
                                                         </a>
                                                     </li>
                                                     <li><a href="single-product.html"><i className="fa fa-star"></i></a></li>
@@ -39,7 +39,7 @@ const Home = (props: HomeProps) => {
                                                 </ul>
                                             </div>
 
-                                            <img src="src/assets/images/kid-01.jpg" alt="" />
+                                            <img src="src/assets/images/men-01.jpg" alt="" />
                                         </div>
                                         <div className="down-content">
                                             <h4>{product.name}</h4>
